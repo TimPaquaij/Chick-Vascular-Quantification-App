@@ -5,7 +5,6 @@ This app quantifies chick vascular structure within microscopy images using a co
 
 An overview of the workflow is given by the figure underneath:
 <img src="fig/New_vertival_flowchart_def.jpg" width="900px"/> 
-////////////////////////////////////////////////////////////////
 
 Results
 ================================================
