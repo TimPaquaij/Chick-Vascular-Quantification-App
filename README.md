@@ -11,4 +11,4 @@ This app can be used to generate the following results based on microscopy image
 <img src=fig/Table 2.png" width="900px"/> 
 
 **Video**
-<iframe src="https://vimeo.com/1018050755?ts=0&share=copy" width="900" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+[![Watch the video](https://vimeo.com/1018050755?ts=0&share=copy/maxresdefault.jpg)](https://vimeo.com/1018050755?ts=0&share=copy)
