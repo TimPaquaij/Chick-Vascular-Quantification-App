@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 **.DS_Store
 mov/
+/Image segmentation with unet
 # C extensions
 *.so
 
