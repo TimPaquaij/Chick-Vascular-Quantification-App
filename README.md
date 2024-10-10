@@ -1,7 +1,7 @@
 Chick Vascular Quantification App
 ==========
 
-This app quantifies chick vascular structure within microscopy images using a computer vision and deep learning algorithm. The application is based on tkinter UI and utilises Tensorflow for the neural network. Furthemore the ability to connect a microscopy camera has been added to quantify the chick vascular structure real-time.
+This app quantifies chick vascular structures within microscopy images using a computer vision and deep learning approach. The application is based on tkinter UI and utilises Keras/Tensorflow for the nerual network architecture. Furthemore the ability to connect a microscopy camera has been added to quantify the chick vascular structure real-time.
 
 An overview of the workflow is given by the figure underneath:
 <img src="fig/New_vertival_flowchart_def.jpg" width="900px"/> 
