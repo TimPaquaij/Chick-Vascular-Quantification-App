@@ -9,10 +9,10 @@ import matplotlib.pyplot as plt
 from collections import Counter
 
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-from diameter_shortest_distance import diameter_short
+from core.diameter_shortest_distance import diameter_short
 from patchify import patchify, unpatchify
-from Instance_semantic_segmentation_model import unet_multiclass
-from branch_detection import branch
+from core.NN.Instance_semantic_segmentation_model import unet_multiclass
+from core.branch_detection import branch
 from tkinter import ttk
 from ttkthemes import themed_tk as tk
 import tkinter as tkin

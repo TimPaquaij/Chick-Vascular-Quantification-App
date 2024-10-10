@@ -1,6 +1,6 @@
 from patchify import patchify, unpatchify
 import numpy as np
-from diameter_shortest_distance import diameter_short
+from core.diameter_shortest_distance import diameter_short
 import cv2
 from matplotlib import pyplot as plt
 from tqdm import tqdm

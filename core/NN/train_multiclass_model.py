@@ -1,7 +1,7 @@
 from sklearn.utils import class_weight
 from tensorflow.python.framework.constant_op import constant
-from Instance_semantic_segmentation_model import unet_multiclass
-from data_multiclass  import data_multiclass
+from core.NN.Instance_semantic_segmentation_model import unet_multiclass
+from core.NN.data_multiclass  import data_multiclass
 import tensorflow as tf
 from tensorflow.keras import backend as K
 import tensorflow.keras as keras

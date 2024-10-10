@@ -9,8 +9,8 @@ import skimage
 from shapely.geometry import LineString
 from scipy.ndimage.morphology import distance_transform_edt
 from scipy.ndimage import gaussian_laplace
-from points_from_line_extraction import get_line
-from Thresholding import process, grayStretch,adjust_gamma,build_filters2
+from core.CV.points_from_line_extraction import get_line
+from core.CV.Thresholding import process, grayStretch,adjust_gamma,build_filters2
 import statistics
 from skimage.filters.rank import core_cy_3d
 
@@ -66,9 +66,9 @@ def average_area(img): #Determine the average area for image smoothing
         for i in range(img.shape[0]): 
             for j in range(img.shape[1]):
                 if img[i,j] ==k: #search where this number is classifieed
-                    branch = np.where(img[i-1:i+2:,j-1:j+2]==k) #checks how often it apprears in the naberhood
+                    branch = np.where(img[i-1:i+2:,j-1:j+2]==k) #checks how often it apprears in the neighbourhood
                     branch = np.array(branch) #transfomrs output to array
-                    if 0< branch.size < 12: #if the number appears les then 3 ties in the naberhood it checks which number appears often en changes it to that number
+                    if 0< branch.size < 3: #if the number appears less then 3 times in the neighbourhood it checks which number appears often and changes it to that number
                         number = ImageStat.Stat(img[i-1:i+2:,j-1:j+2].tolist()).count
                         number=statistics.mode(number[0])
                         new_img[i,j] = number
@@ -97,8 +97,8 @@ def points_mid_line(img): #Makes  a list for all pixels wich where classified as
 def diameter_short(img,radius,threshold_skl,clipLimit,tile,sigma, YLength,m,threshold_thresh): #Radius, threshold_skl, contrast cliplimit, tile size, sigma, filtersize,mean, thresholdthresh
     
     
-    img_height =  512
-    img_width  =  512
+    img_height = img.shape[0]
+    img_width  =  img.shape[1]
     
     claheImg, gaussMFImg,img_thresh= Thresh(img,clipLimit,tile,sigma,YLength,m,threshold_thresh) # Function for threesholdiing
     img_thresh_def = img_thresh.copy()

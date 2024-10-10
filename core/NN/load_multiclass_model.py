@@ -1,5 +1,5 @@
-from Instance_semantic_segmentation_model import unet_multiclass
-from data_multiclass import data_multiclass
+from core.NN.Instance_semantic_segmentation_model import unet_multiclass
+from core.NN.data_multiclass import data_multiclass
 import tensorflow as tf
 import datetime
 import numpy as np

@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import cv2
-from Instance_semantic_segmentation_model import unet_multiclass
+from core.NN.Instance_semantic_segmentation_model import unet_multiclass
 from pandas import DataFrame
 import seaborn as sns
 from collections import Counter

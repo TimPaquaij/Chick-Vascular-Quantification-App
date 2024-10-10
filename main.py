@@ -10,10 +10,10 @@ from collections import Counter
 import datetime
 
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-from diameter_shortest_distance import diameter_short
+from core.CV.diameter_shortest_distance import diameter_short
 from patchify import patchify, unpatchify
-from Instance_semantic_segmentation_model import unet_multiclass
-from branch_detection import branch
+from core.NN.Instance_semantic_segmentation_model import unet_multiclass
+from core.CV.branch_detection import branch
 from tkinter import DoubleVar, ttk
 from ttkthemes import themed_tk as tk
 import tkinter as tkin
@@ -1101,7 +1101,7 @@ class GUI():
                 self.img_patch_normal_unet = self.patches_image.reshape((self.patches_image.shape[0]*self.patches_image.shape[1],self.patch_size.get(),self.patch_size.get(),3)) #reshape patches in a formating fitting for unet model
             
                 model =unet_multiclass(19, self.patch_size.get(), self.patch_size.get(),3) #loading model
-                model.load_weights('multiclass_model_'+str(self.patch_size.get())+'_test.h5') # adding wheights
+                model.load_weights('checkpoints/multiclass_model_'+str(self.patch_size.get())+'_test.h5') # adding wheights
                 prediction = (model.predict(self.img_patch_normal)) #Making prediction
                 prediction = prediction.reshape(self.img_patch_normal.shape[0],self.patch_size.get(),self.patch_size.get(),19)
                 

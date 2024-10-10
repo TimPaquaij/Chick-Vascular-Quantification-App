@@ -6,6 +6,14 @@ This app quantifies chick vascular structures within microscopy images using a c
 An overview of the workflow is given by the figure underneath:
 <img src="fig/New_vertival_flowchart_def.jpg" width="900px"/> 
 
+Run the app
+===
+```bash
+python main.py
+```
+
+
+
 Results
 ================================================
 This app can be used to generate the following results based on microscopy images of atleast 256 pixels.

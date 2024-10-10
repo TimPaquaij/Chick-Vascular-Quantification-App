@@ -1,5 +1,5 @@
 import numpy as np
-from diameter_shortest_distance import Thresh, Mid_line
+from core.CV.diameter_shortest_distance import Thresh, Mid_line
 
 def split_end_point(img):
     #Detect the diffrent points which form the middle_line
