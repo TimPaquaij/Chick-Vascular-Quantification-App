@@ -235,7 +235,7 @@ def diameter_short(img,radius,threshold_skl,clipLimit,tile,sigma, YLength,m,thre
         for j in range(img_thresh.shape[0]):
             img_thresh[i,j] = np.where(img_thresh[i,j]== 255,0,img_thresh[i,j]) #Pixels which hassn't been classiefied with a distacnce will be set to background
 
-    img_def = average_area(img_thresh) #For further smoothing a average check is done to see if surounding pixels have the same value
+    img_def = img_thresh #For further smoothing a average check is done to see if surounding pixels have the same value
     #plt.savefig('Images_def/Short_distance.png', dpi =400)
 
     #img_def =average_area(img_thresh)    

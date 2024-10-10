@@ -53,6 +53,7 @@ class GUI():
         self.YLength = 15
         self.Thresh_thresh = 250
         self.mean = 180
+        self.pixel_width = 5
         self.digital_zoom =1
         self.ROI_size = tkin.IntVar(self.master)
         self.selection_field = None
@@ -350,7 +351,7 @@ class GUI():
         self.selection_field.bind('<<ListboxSelect>>', self._reselect) #Bind selection field with the reselect function
     def activate_camera(self):
         model =unet_multiclass(19, 512,512,3) #loading model
-        model.load_weights('multiclass_model_512_test.h5') # adding wheights
+        model.load_weights('checkpoints/multiclass_model_512_test.h5') # adding wheights
         self.video = cv2.VideoCapture(0)
         self.diameter_width_array = [0,2,5,7,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110]
         self.close = 'no'
